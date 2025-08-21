@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock · Paper · Scissors — Play!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="sparkles" aria-hidden="true"></div>
+
+    <div class="title">
+      <h1>Rock · Paper · Scissors <span style="opacity:.6; font-size:.6em">— pick one!</span></h1>
+      <span class="badge">✨ lets gooooo</span>
+    </div>
+
+    <div class="scoreboard">
+      <div class="score">
+        <span class="label">You</span>
+        <span class="value" id="pScore">0</span>
+      </div>
+      <div class="vs">VS</div>
+      <div class="score">
+        <span class="label">Computer</span>
+        <span class="value" id="cScore">0</span>
+      </div>
+    </div>
+
+    <div id="result" class="result draw">
+      <span id="resultIcon">😶</span>
+      <span id="resultText">Make your move</span>
+    </div>
+
+    <div class="arena">
+      <button class="choice" data-choice="rock">
+        <div class="icon">✊</div>
+        <div class="name">Rock</div>
+        <div class="hint">Crushes Scissors</div>
+        <div class="flash"></div>
+      </button>
+      <button class="choice" data-choice="paper">
+        <div class="icon">✋</div>
+        <div class="name">Paper</div>
+        <div class="hint">Covers Rock</div>
+        <div class="flash"></div>
+      </button>
+      <button class="choice" data-choice="scissors">
+        <div class="icon">✌️</div>
+        <div class="name">Scissors</div>
+        <div class="hint">Cut Paper</div>
+        <div class="flash"></div>
+      </button>
+    </div>
+
+    <div class="chips" id="lastRound">
+      <span class="chip">You: —</span>
+      <span class="chip">Computer: —</span>
+      <span class="chip">Round: 0</span>
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="reset">↺ Reset scores</button>
+      <button class="btn" id="bestOf">🎯 Best of 5</button>
+    </div>
+
+    <div class="tiny">Tip: tap or click a card.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
